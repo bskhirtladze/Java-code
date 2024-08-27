@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class MultipleChoise {
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        String[] answers = {"c", "d", "b"};
+        String[] responces = {"","",""};
+        
+        System.out.println("What is 2 + 2 ?");
+        System.out.println("a) 2");
+        System.out.println("b) 3");
+        System.out.println("c) 4");
+        System.out.println("d) 5");
+        
+        System.out.println();
+        
+        System.out.println("What is the capital of Georgia?");
+        System.out.println("a) Mtskheta");
+        System.out.println("b) Kutaisi");
+        System.out.println("c) Zugdidi");
+        System.out.println("d) Tbilisi");
+        
+        System.out.println();
+        
+        System.out.println("What is the best football team in the world?");
+        System.out.println("a) ManU");
+        System.out.println("b) Liverpool");
+        System.out.println("c) Deportivo");
+        System.out.println("d) Valencia");
+        
+        System.out.println();
+        
+        responces[0] = scan.next();
+        responces[1] = scan.next();
+        responces[2] = scan.next();
+        
+        int score = 0;
+        
+        for(int i = 0; i < 3; i++) {
+            if(responces[i].equalsIgnoreCase(answers[i])) {
+                score++;
+            }
+        }
+        System.out.println();
+        System.out.println("Score: " + score + "/3");
+        
+    }
+}
